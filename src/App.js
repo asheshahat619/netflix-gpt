@@ -1,10 +1,7 @@
-import './App.css';
-
+import BodyComponent from './components/BodyComponent';
 function App() {
   return (
-      <div>
-          <div className=' text-3xl font-bold text-center'>Namaste</div>
-      </div>
+    <BodyComponent/>
   )
 }
 
