@@ -29,13 +29,13 @@ const LoginComponent = () => {
                     console.log(userCredential)
                     const user = userCredential.user;
                     console.log(user)
-                    navigate("/browse")
+                    
                     // ...
                 })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert("entered email or password is invalid")
+                    
                 });
         }
         else {
@@ -46,28 +46,28 @@ const LoginComponent = () => {
                     console.log(userCredential)
                     const user = userCredential.user;
                     console.log(user)
-                    navigate("/browse")
+                  
                     // ...
                 })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert("could not signup")
+                    
                     // ..
                 });
         }
     }
     return (
-        <div className="">
+        <div >
             {/* use formic library  */}
             <HeaderComponent />
             <div className="absolute">
-                <img className="" src="https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/453ba2a1-6138-4e3c-9a06-b66f9a2832e4/IN-en-20240415-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="background.png"></img>
+                <img className=" mobile:hidden" src="https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/453ba2a1-6138-4e3c-9a06-b66f9a2832e4/IN-en-20240415-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="background.png"></img>
 
             </div>
-            <form onSubmit={(event) => {
+            <form  onSubmit={(event) => {
                 event.preventDefault()
-            }} className="absolute  bg-black bg-opacity-70 p-4 w-3/12 my-36 mx-auto left-0 right-0 text-white  ">
+            }} className="absolute mobile:bg-black min-w-72  bg-black bg-opacity-70 p-4 w-3/12 my-36 mx-auto left-0 right-0 text-white  ">
                 <h1 className="  text-3xl text-bold font-bold ">{isSignIn ? "Sign In" : "Sign Up"}</h1>
                 {
                     !isSignIn && <input type="text" ref={name} className="p-2 my-4 w-full  bg-gray-500" placeholder="Enter name"></input>

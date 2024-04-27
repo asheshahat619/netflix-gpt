@@ -1,0 +1,39 @@
+[debug] [2024-04-27T12:41:45.037Z] ----------------------------------------------------------------------
+[debug] [2024-04-27T12:41:45.039Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ashis\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-04-27T12:41:45.040Z] CLI Version:   13.7.3
+[debug] [2024-04-27T12:41:45.040Z] Platform:      win32
+[debug] [2024-04-27T12:41:45.040Z] Node Version:  v18.17.1
+[debug] [2024-04-27T12:41:45.041Z] Time:          Sat Apr 27 2024 18:11:45 GMT+0530 (India Standard Time)
+[debug] [2024-04-27T12:41:45.042Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-27T12:41:45.047Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-27T12:41:45.048Z] > authorizing via signed-in user (asheshabhat@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ashis\netflixgpt\netflix-gpt
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-04-27T12:42:06.183Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-04-27T12:42:06.183Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"netflix-gpt2","name":"netflix-gpt2"}
+[debug] [2024-04-27T12:42:08.528Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-04-27T12:42:08.528Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-04-27T12:42:09.585Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\ashis\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\ashis\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:299:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID netflix-gpt2. Please try again with a unique project ID.
